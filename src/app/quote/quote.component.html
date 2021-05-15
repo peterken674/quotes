@@ -12,6 +12,7 @@
                 <p class="quote">“{{ quote.quote }}”</p>
                 <p class="author mt-2">{{ quote.author }}</p>
                 <hr />
+                <app-quote-info *ngIf='quote.showInfo' [quote]='quote'></app-quote-info>
                 <div class="footer">
                   <div class="vote">
                     <div class="upvote">
@@ -31,7 +32,7 @@
                       ></fa-icon>
                     </div>
                     <div class="displayDetails">
-                      <fa-icon [icon]="infoIcon"></fa-icon>
+                      <fa-icon [icon]="infoIcon" (click)='showInfo(i)'></fa-icon>
                     </div>
                   </div>
                 </div>
