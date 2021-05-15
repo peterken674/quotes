@@ -79,6 +79,7 @@ fa-icon:hover {
 .new{
     position: sticky;
     bottom: 0;
+    min-width: 100%;
 }
 .new-quote{
     background-color: var(--primary-green);
