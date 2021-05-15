@@ -18,13 +18,11 @@ export class QuoteComponent implements OnInit {
         new Quote(3, "I taught myself how to program computers when I was a kid, bought my first computer when I was 10, and sold my first commercial program when I was 12.", "Elon Musk", "Peter Kennedy", new Date(2020,4,1), 76, 6)
     ];
 
-    deleteQuote(isDeleted, index){
-        if (isDeleted){
+    deleteQuote(index){
             let toDelete = confirm(`Are you sure you want to delete this quote by ${this.quotes[index].author}?`);
             if(toDelete){
                 this.quotes.splice(index, 1);
             }
-        }
     }
   constructor() { }
 
