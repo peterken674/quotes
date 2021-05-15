@@ -78,17 +78,19 @@ fa-icon:hover {
 }
 .new{
     position: sticky;
-    bottom: 0;
+    bottom: 1rem;
     min-width: 100%;
 }
 .new-quote{
     background-color: var(--primary-green);
     border: none;
-    border-radius: 0.7rem 0.7rem 0 0;
+    border-radius: 0.7rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 1.2rem;
+    padding-bottom: 0.7rem;
 }
 #form{
     border-radius: 0 0 0.7rem 0.7rem !important;
+    margin-top: -0.5rem;
 }
