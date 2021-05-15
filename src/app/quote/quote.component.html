@@ -15,11 +15,11 @@
                 <div class="footer">
                   <div class="vote">
                     <div class="upvote">
-                      <fa-icon [icon]="upvoteIcon"></fa-icon>
+                      <fa-icon [icon]="upvoteIcon" (click)='upvote(i)'></fa-icon>
                       <p class="mx-1">{{ quote.upvotes }}</p>
                     </div>
                     <div class="downvote mx-2">
-                      <fa-icon [icon]="downvoteIcon"></fa-icon>
+                      <fa-icon [icon]="downvoteIcon" (click)='downvote(i)'></fa-icon>
                       <p class="mx-1">{{ quote.downvotes }}</p>
                     </div>
                   </div>

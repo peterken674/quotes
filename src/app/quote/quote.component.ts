@@ -29,6 +29,26 @@ export class QuoteComponent implements OnInit {
     toggleForm(){
         this.showForm = !this.showForm;
     }
+    upvoted:boolean = false;
+    downvoted:boolean = false;
+    upvote(index){
+        if(!this.upvoted){
+            this.quotes[index].upvotes += 1;
+            this.upvoted = true;
+        }else{
+            this.quotes[index].upvotes -= 1;
+            this.upvoted = false;
+        }
+    }
+    downvote(index){
+        if(!this.downvoted){
+            this.quotes[index].downvotes += 1;
+            this.downvoted = true;
+        }else{
+            this.quotes[index].downvotes -= 1
+            this.downvoted = false;
+        }
+    }
   constructor() { }
 
   ngOnInit(): void {
