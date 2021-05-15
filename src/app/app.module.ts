@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { NewQuoteFormComponent } from './new-quote-form/new-quote-form.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,12 @@ import { NewQuoteFormComponent } from './new-quote-form/new-quote-form.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+    
+ }

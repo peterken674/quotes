@@ -1,0 +1,54 @@
+@import "../../styles.css";
+.card{
+    border: none;
+    box-shadow: 0 0 50px rgba(81, 81, 81, 0.25);
+    border-radius: 0.7rem;
+    color: var(--dark-grey);
+}
+.quote, .author{
+    font-family: 'Montserrat', sans-serif;
+}
+.author{
+    font-style: italic;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.vote{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.upvote, .downvote{
+    display: flex;;
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark-grey);
+}
+.upvote fa-icon{
+    color: var(--primary-green);
+    transition: linear 100ms;
+}
+.downvote fa-icon {
+  color: var(--accent-red);
+  transition: linear 100ms;
+}
+.actions{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.delete{
+    color: var(--accent-red);
+    opacity: 0.6;
+    transition: linear 300ms;
+}
+.displayDetails{
+    color: var(--primary-green);
+    opacity: 0.6;
+    transition: linear 300ms;
+}
+.delete:hover, .displayDetails:hover, fa-icon:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
