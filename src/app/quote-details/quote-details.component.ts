@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { faArrowAltCircleDown, faArrowAltCircleUp, faInfoCircle, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-quote-details',
@@ -8,10 +7,8 @@ import { faArrowAltCircleDown, faArrowAltCircleUp, faInfoCircle, faTrashAlt } fr
 })
 export class QuoteDetailsComponent implements OnInit {
 
-    upvoteIcon = faArrowAltCircleUp;
-    downvoteIcon = faArrowAltCircleDown;
-    deleteIcon = faTrashAlt;
-    infoIcon = faInfoCircle;
+
+
   constructor() { }
 
   ngOnInit(): void {
