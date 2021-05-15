@@ -8,6 +8,7 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { NewQuoteFormComponent } from './new-quote-form/new-quote-form.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { QuoteInfoComponent } from './quote-info/quote-info.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { QuoteInfoComponent } from './quote-info/quote-info.component';
     QuoteComponent,
     QuoteDetailsComponent,
     NewQuoteFormComponent,
-    QuoteInfoComponent
+    QuoteInfoComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
