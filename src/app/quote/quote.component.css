@@ -10,13 +10,6 @@ header>h1{
     font-size: 4rem;
 }
 
-.card {
-  border: none;
-  box-shadow: 0 0 50px rgba(81, 81, 81, 0.25);
-  border-radius: 0.7rem;
-  color: var(--dark-grey);
-}
-
 .quote,
 .author {
   font-family: 'Montserrat', sans-serif;
@@ -85,13 +78,16 @@ fa-icon:hover {
 }
 .new{
     position: sticky;
-    bottom: 1rem;
+    bottom: 0;
 }
 .new-quote{
     background-color: var(--primary-green);
     border: none;
-    border-radius: 0.7rem;
+    border-radius: 0.7rem 0.7rem 0 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 1.2rem;
+}
+#form{
+    border-radius: 0 0 0.7rem 0.7rem !important;
 }

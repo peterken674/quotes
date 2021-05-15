@@ -13,3 +13,9 @@ body,*{
     margin: 0;
     padding: 0;
 }
+.card {
+  border: none;
+  box-shadow: 0 0 50px rgba(81, 81, 81, 0.25);
+  border-radius: 0.7rem;
+  color: var(--dark-grey);
+}

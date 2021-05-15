@@ -1,0 +1,10 @@
+form{
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+}
+textarea, input{
+    border: none;
+    background-color: #F4F4F4;
+    border-radius: 0.5rem;
+}
