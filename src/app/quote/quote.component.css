@@ -83,3 +83,15 @@ fa-icon:hover {
 .card {
   padding-bottom: 0 !important;
 }
+.new{
+    position: sticky;
+    bottom: 1rem;
+}
+.new-quote{
+    background-color: var(--primary-green);
+    border: none;
+    border-radius: 0.7rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+}

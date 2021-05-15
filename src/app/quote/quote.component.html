@@ -4,39 +4,46 @@
       <h1 class="text-center my-3">Quotious</h1>
     </header>
     <div class="container">
-        <div class="row">
-            <div *ngFor="let quote of quotes; let i = index" class="container">
-        <div class="row">
+      <div class="row">
+        <div *ngFor="let quote of quotes; let i = index" class="container">
+          <div class="row">
             <div class="card p-4 my-4">
-                <div>
-                    <p class="quote">“{{ quote.quote }}”</p>
-                    <p class="author mt-2">{{ quote.author }}</p>
-                    <hr>
-                    <div class="footer">
-                        <div class="vote">
-                        <div class="upvote">
-                            <fa-icon [icon]= "upvoteIcon"></fa-icon>
-                            <p class="mx-1">{{ quote.upvotes }}</p>
-                        </div>
-                        <div class="downvote mx-2">
-                            <fa-icon [icon]= "downvoteIcon"></fa-icon>
-                            <p class="mx-1">{{ quote.downvotes }}</p>
-                        </div>
+              <div>
+                <p class="quote">“{{ quote.quote }}”</p>
+                <p class="author mt-2">{{ quote.author }}</p>
+                <hr />
+                <div class="footer">
+                  <div class="vote">
+                    <div class="upvote">
+                      <fa-icon [icon]="upvoteIcon"></fa-icon>
+                      <p class="mx-1">{{ quote.upvotes }}</p>
                     </div>
-                    <div class="actions">
-                        <div class="delete mx-3">
-                            <fa-icon [icon]= "deleteIcon" (click)='deleteQuote(i)'></fa-icon>
-                        </div>
-                        <div class="displayDetails">
-                            <fa-icon [icon]= "infoIcon"></fa-icon>
-                        </div>
+                    <div class="downvote mx-2">
+                      <fa-icon [icon]="downvoteIcon"></fa-icon>
+                      <p class="mx-1">{{ quote.downvotes }}</p>
                     </div>
+                  </div>
+                  <div class="actions">
+                    <div class="delete mx-3">
+                      <fa-icon
+                        [icon]="deleteIcon"
+                        (click)="deleteQuote(i)"
+                      ></fa-icon>
                     </div>
+                    <div class="displayDetails">
+                      <fa-icon [icon]="infoIcon"></fa-icon>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-        </div>
+      </div>
+      <div class="row new">
+          <div class="new-quote btn btn-success">SUBMIT NEW QUOTE</div>
+          <app-new-quote-form></app-new-quote-form>
+      </div>
     </div>
   </div>
 </body>
