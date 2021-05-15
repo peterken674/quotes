@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url(https://fonts.googleapis.com/css?family=Rochester:regular);
+
+:root {
+    --primary-green: #76D17F;
+    --dark-grey: #515151;
+}
+body,*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

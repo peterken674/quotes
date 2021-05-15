@@ -1,0 +1,10 @@
+header{
+    min-width: 100%;
+    font-family: 'Rochester', cursive;
+    color: var(--primary-green);
+    background-color: var(--dark-grey);
+    position: relative;
+}
+header>h1{
+    font-size: 4rem;
+}
