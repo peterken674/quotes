@@ -13,10 +13,11 @@ export class QuoteComponent implements OnInit {
     infoIcon = faInfoCircle;
 
     unsortedQuotes: Quote[] = [
-        new Quote(1, "I think it\'s fair to say that personal computers have become the most empowering tool we\'ve ever created. They\'re tools of communication, they\'re tools of creativity, and they can be shaped by their user.", "Bill Gates", "Rachel Green", new Date(2021,2,29),29, 12),
+        new Quote(1, "I think it's fair to say that personal computers have become the most empowering tool we\'ve ever created. They're tools of communication, they're tools of creativity, and they can be shaped by their user.", "Bill Gates", "Rachel Green", new Date(2021,2,29),29, 12),
         new Quote(2, "Whether you want to uncover the secrets of the universe, or you just want to pursue a career in the 21st century, basic computer programming is an essential skill to learn.", "Stephen Hawking", "Monica Geller", new Date(2021,3,23),54, 23),
         new Quote(3, "I taught myself how to program computers when I was a kid, bought my first computer when I was 10, and sold my first commercial program when I was 12.", "Elon Musk", "Chandler Bing", new Date(2021,4,1), 76, 6),
-        new Quote(4, "If future generations are to remember us more with gratitude than sorrow, we must achieve more than just the miracles of technology. We must also leave them a glimpse of the world as it was created, not just as it looked when we got through with it.", "Lyndon B. Johnson", "Joey Tribbiani", new Date(2021,5,12), 20, 13)
+        new Quote(4, "If future generations are to remember us more with gratitude than sorrow, we must achieve more than just the miracles of technology. We must also leave them a glimpse of the world as it was created, not just as it looked when we got through with it.", "Lyndon B. Johnson", "Joey Tribbiani", new Date(2021,5,12), 20, 13),
+        new Quote(5, "I wish there was a way to know you were in the good old days before you actually left them.", "Andy Bernard", "Ross Geller", new Date(2021,5,16),82,2)
     ];
 
     deleteQuote(index){
@@ -67,19 +68,6 @@ export class QuoteComponent implements OnInit {
         this.quotes.push(quote);
     }
 
-    // compare:number(a:Quote, b:Quote) {
-    //     let upvotesA = a.upvotes;
-    //     let upvotesB = b.upvotes;
-
-    //     let comparison = 0;
-    //     if(upvotesA < upvotesB){
-    //         comparison = 1;
-    //     }else if (upvotesA > upvotesB){
-    //         comparison = -1;
-    //     }
-    //     return comparison;
-    // }
-
     quotes: Quote[] = this.unsortedQuotes.sort((obj1, obj2) => {
           if (obj1.upvotes < obj2.upvotes) {
             return 1;
@@ -92,6 +80,9 @@ export class QuoteComponent implements OnInit {
           return 0;
         });
 
+        topQuote(index){
+
+        }
   constructor() { }
 
   ngOnInit(): void {

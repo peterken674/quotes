@@ -15,9 +15,14 @@ body,*{
 }
 .card {
   border: none;
-  box-shadow: 0 0 50px rgba(81, 81, 81, 0.25);
+  box-shadow: 0 0 30px rgba(81, 81, 81, 0.25);
   border-radius: 0.7rem;
   color: var(--dark-grey);
+  transition: linear 200ms;
+}
+.card:hover{
+    transform: scale(1.025);
+    box-shadow: 0 0 50px rgba(81, 81, 81, 0.25);
 }
 
 /* Badge CSS from Bootstrap */
