@@ -65,8 +65,14 @@ export class QuoteComponent implements OnInit {
 
     //Add new quote
     addNewQuote(quote){
+        if(quote.name !== "" && quote.quote !== "" && quote.submitter !== ""){
         quote.id = this.quotes.length + 1;
         this.quotes.push(quote);
+        alert(`${quote.author}'s quote submitted successfully by ${quote.submitter}. Click the form header to minimize the form and view quotes.`);
+
+        }else{
+            alert("Please fill all fields.");
+        }
     }
 
     quotes: Quote[] = this.unsortedQuotes.sort((obj1, obj2) => {
@@ -80,10 +86,6 @@ export class QuoteComponent implements OnInit {
 
           return 0;
         });
-
-        topQuote(index){
-
-        }
   constructor() { }
 
   ngOnInit(): void {
