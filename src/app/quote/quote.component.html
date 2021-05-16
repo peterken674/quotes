@@ -9,6 +9,7 @@
           <div class="row">
             <div class="card p-4 my-4">
               <div>
+                  <span class="badge badge-success my-2" *ngIf='i==0'>Top Quote</span>
                 <p class="quote">“{{ quote.quote }}”</p>
                 <p class="author mt-2">{{ quote.author }}</p>
                 <hr />

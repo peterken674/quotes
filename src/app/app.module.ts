@@ -10,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { QuoteInfoComponent } from './quote-info/quote-info.component';
 import { DateCountPipe } from './date-count.pipe';
 import { FormsModule } from '@angular/forms';
+import { TopQuoteDirective } from './top-quote.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     QuoteDetailsComponent,
     NewQuoteFormComponent,
     QuoteInfoComponent,
-    DateCountPipe
+    DateCountPipe,
+    TopQuoteDirective
   ],
   imports: [
     BrowserModule,
