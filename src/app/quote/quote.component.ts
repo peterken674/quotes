@@ -12,7 +12,7 @@ export class QuoteComponent implements OnInit {
     deleteIcon = faTrashAlt;
     infoIcon = faInfoCircle;
 
-    quotes: Quote[] = [
+    unsortedQuotes: Quote[] = [
         new Quote(1, "I think it\'s fair to say that personal computers have become the most empowering tool we\'ve ever created. They\'re tools of communication, they\'re tools of creativity, and they can be shaped by their user.", "Bill Gates", "Rachel Green", new Date(2021,2,29),29, 12),
         new Quote(2, "Whether you want to uncover the secrets of the universe, or you just want to pursue a career in the 21st century, basic computer programming is an essential skill to learn.", "Stephen Hawking", "Monica Geller", new Date(2021,3,23),54, 23),
         new Quote(3, "I taught myself how to program computers when I was a kid, bought my first computer when I was 10, and sold my first commercial program when I was 12.", "Elon Musk", "Chandler Bing", new Date(2021,4,1), 76, 6),
@@ -66,6 +66,32 @@ export class QuoteComponent implements OnInit {
         quote.id = this.quotes.length + 1;
         this.quotes.push(quote);
     }
+
+    // compare:number(a:Quote, b:Quote) {
+    //     let upvotesA = a.upvotes;
+    //     let upvotesB = b.upvotes;
+
+    //     let comparison = 0;
+    //     if(upvotesA < upvotesB){
+    //         comparison = 1;
+    //     }else if (upvotesA > upvotesB){
+    //         comparison = -1;
+    //     }
+    //     return comparison;
+    // }
+
+    quotes: Quote[] = this.unsortedQuotes.sort((obj1, obj2) => {
+          if (obj1.upvotes < obj2.upvotes) {
+            return 1;
+          }
+
+          if (obj1.upvotes > obj2.upvotes) {
+            return -1;
+          }
+
+          return 0;
+        });
+
   constructor() { }
 
   ngOnInit(): void {
