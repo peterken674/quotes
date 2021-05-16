@@ -14,6 +14,7 @@ export class NewQuoteFormComponent implements OnInit {
 
   submitQuote(){
     this.addQuote.emit(this.newQuote);
+    alert(`${this.newQuote.author}'s quote submitted successfully by ${this.newQuote.submitter}. Click the form header to minimize the form and view quotes.`)
   }
   ngOnInit(): void {
   }
