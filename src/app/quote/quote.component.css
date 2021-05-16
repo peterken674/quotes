@@ -76,6 +76,9 @@ fa-icon:hover {
 .card {
   padding-bottom: 0 !important;
 }
+#form:hover{
+    transform: none;
+}
 .new{
     position: sticky;
     bottom: 1rem;
