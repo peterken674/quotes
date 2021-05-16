@@ -1,17 +1,17 @@
-<form>
+<form [formGroup]="newQuoteForm" (ngSubmit)="onSubmit()">
   <div class="form-group mt-4">
     <label for="quote">What is the quote?</label>
-    <textarea class="form-control" name="quote" id="quote" rows="4"></textarea>
+    <textarea class="form-control" name="quote" id="quote" rows="4" formControlName="name"></textarea>
   </div>
   <div class="form-group mt-4">
     <label for="author">Who is the author?</label>
     <input type="text"
-      class="form-control" name="author" id="author" aria-describedby="helpId" placeholder="">
+      class="form-control" name="author" id="author" aria-describedby="helpId" placeholder="" formControlName="author">
   </div>
   <div class="form-group my-4">
     <label for="author">What is the name of the submitter?</label>
     <input type="text"
-      class="form-control" name="author" id="author" aria-describedby="helpId" placeholder="">
+      class="form-control" name="author" id="author" aria-describedby="helpId" placeholder="" formControlName="submitter">
   </div>
   <button type="submit" class="btn btn-outline-success text-uppercase mb-4">Submit</button>
 </form>
