@@ -1,17 +1,20 @@
-<form>
+<form (ngSubmit)='submitQuote()' #newQuoteForm='ngForm'>
   <div class="form-group mt-4">
     <label for="quote">What is the quote?</label>
-    <textarea class="form-control" name="quote" id="quote" rows="4" formControlName="name"></textarea>
+    <textarea class="form-control" name="quote" id="quote" rows="4" name="quote" [(ngModel)]="newQuote.quote" #quote='ngModel' required></textarea>
+    <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger mt-2">Oops! Seems like you did not enter a quote.</div>
   </div>
   <div class="form-group mt-4">
     <label for="author">Who is the author?</label>
     <input type="text"
-      class="form-control" name="author" id="author" aria-describedby="helpId" placeholder="" formControlName="author">
+      class="form-control" name="author" id="author" name="author" [(ngModel)]="newQuote.author" #author='ngModel' required>
+      <div [hidden]="author.valid || author.pristine" class="alert alert-danger mt-2">Oops! Seems like you did not enter an author.</div>
   </div>
   <div class="form-group my-4">
-    <label for="author">What is the name of the submitter?</label>
+    <label for="submitter">What is the name of the submitter?</label>
     <input type="text"
-      class="form-control" name="author" id="author" aria-describedby="helpId" placeholder="" formControlName="submitter">
+      class="form-control" name="submitter" id="submitter" name="submitter" [(ngModel)]="newQuote.submitter" #submitter='ngModel' required>
+      <div [hidden]="submitter.valid || submitter.pristine" class="alert alert-danger mt-2">Oops! Seems like you did not enter a submitter.</div>
   </div>
   <button type="submit" class="btn btn-outline-success text-uppercase mb-4">Submit</button>
 </form>

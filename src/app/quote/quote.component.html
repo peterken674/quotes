@@ -44,7 +44,7 @@
       <div class="row new">
           <div class="new-quote btn btn-success text-uppercase" (click) = 'toggleForm()'>Submit New Quote</div>
           <div class="card px-5" id="form" *ngIf='showForm'>
-              <app-new-quote-form></app-new-quote-form>
+              <app-new-quote-form (addQuote)='addNewQuote($event)'></app-new-quote-form>
           </div>
       </div>
     </div>

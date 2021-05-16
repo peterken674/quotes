@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Quote } from '../quote';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-new-quote-form',
@@ -6,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-quote-form.component.css']
 })
 export class NewQuoteFormComponent implements OnInit {
+    constructor(){}
 
-  constructor() { }
+  newQuote = new Quote(0, "", "", "", new Date(), 0, 0);
+  @Output() addQuote = new EventEmitter<Quote>();
 
+  submitQuote(){
+    this.addQuote.emit(this.newQuote);
+  }
   ngOnInit(): void {
   }
 

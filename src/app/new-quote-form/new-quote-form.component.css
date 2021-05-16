@@ -8,3 +8,7 @@ textarea, input{
     background-color: #F4F4F4;
     border-radius: 0.5rem;
 }
+.alert{
+    border-radius: 0.5rem !important;
+    font-size: 0.9rem;
+}
