@@ -17,7 +17,8 @@ export class QuoteComponent implements OnInit {
         new Quote(2, "Whether you want to uncover the secrets of the universe, or you just want to pursue a career in the 21st century, basic computer programming is an essential skill to learn.", "Stephen Hawking", "Monica Geller", new Date(2021,3,23),54, 23),
         new Quote(3, "I taught myself how to program computers when I was a kid, bought my first computer when I was 10, and sold my first commercial program when I was 12.", "Elon Musk", "Chandler Bing", new Date(2021,4,1), 76, 6),
         new Quote(4, "If future generations are to remember us more with gratitude than sorrow, we must achieve more than just the miracles of technology. We must also leave them a glimpse of the world as it was created, not just as it looked when we got through with it.", "Lyndon B. Johnson", "Joey Tribbiani", new Date(2021,5,12), 20, 13),
-        new Quote(5, "I wish there was a way to know you were in the good old days before you actually left them.", "Andy Bernard", "Ross Geller", new Date(2021,5,16),82,2)
+        new Quote(5, "I wish there was a way to know you were in the good old days before you actually left them.", "Andy Bernard", "Ross Geller", new Date(2021,5,16),82,2),
+        new Quote(6, 'As I swept the last bit of dust, I made a covenant with myself: I will accept. Whatever will be, will be. I have a life to lead. I recalled words a friend had told me, the philosophy of her faith. "Life is a journey and a struggle," she had said. "We cannot control it, but we can make the best of any situation." I was indeed in quite a situation. It was up to me to make the best of it.', "Wangari Maathai", "Peter Kennedy", new Date(2020,5,29),145,21)
     ];
 
     deleteQuote(index){

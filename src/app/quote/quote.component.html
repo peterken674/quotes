@@ -7,7 +7,7 @@
       <div class="row">
         <div *ngFor="let quote of quotes; let i = index" class="container">
           <div class="row">
-            <div class="card p-4 my-4" [style.border]="i==0? '1.5px solid var(--primary-green)': ''" >
+            <div class="card p-4 my-4" [style.border]="i==0? '1.5px solid var(--primary-green)': ''" [style.transform]="i==0? 'scale(1.025)': ''">
               <div>
                   <span class="badge badge-success my-2" *ngIf='i==0'>Most Upvotes</span>
                 <p class="quote">“{{ quote.quote }}”</p>
