@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote'
 import { faArrowAltCircleDown, faArrowAltCircleUp, faInfoCircle, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import { FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
@@ -62,9 +61,7 @@ export class QuoteComponent implements OnInit {
         this.quotes[index].showInfo = !this.quotes[index].showInfo;
     }
 
-  constructor() { 
-      private formBuilder:FormBuilder;
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
