@@ -1,4 +1,4 @@
-<form (ngSubmit)='submitQuote()' #newQuoteForm='ngForm'>
+<form (ngSubmit)='submitQuote(); newQuoteForm.resetForm({})' #newQuoteForm='ngForm' >
   <div class="form-group mt-4">
     <label for="quote">What is the quote?</label>
     <textarea class="form-control" name="quote" id="quote" rows="4" name="quote" [(ngModel)]="newQuote.quote" #quote='ngModel' required></textarea>
@@ -18,3 +18,4 @@
   </div>
   <button type="submit" class="btn btn-outline-success text-uppercase mb-4">Submit</button>
 </form>
+            

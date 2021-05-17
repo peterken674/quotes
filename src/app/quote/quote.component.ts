@@ -67,6 +67,7 @@ export class QuoteComponent implements OnInit {
     addNewQuote(quote){
         if(quote.name !== "" && quote.quote !== "" && quote.submitter !== ""){
         quote.id = this.quotes.length + 1;
+        quote.dateSubmitted = new Date(quote.dateSubmitted);
         this.quotes.push(quote);
         alert(`${quote.author}'s quote submitted successfully by ${quote.submitter}. Click the form header to minimize the form and view quotes.`);
 
