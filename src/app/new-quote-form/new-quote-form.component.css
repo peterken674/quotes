@@ -7,6 +7,9 @@ textarea, input{
     border: none;
     background-color: #F4F4F4;
     border-radius: 0.5rem;
+    font-family: 'Roboto',
+    sans-serif;
+    font-weight: 300;
 }
 .alert{
     border-radius: 0.5rem !important;
