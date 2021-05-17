@@ -37,6 +37,7 @@ export class QuoteComponent implements OnInit {
             let toDelete = confirm(`Are you sure you want to delete this quote by ${this.quotes[index].author}?`);
             if(toDelete){
                 this.quotes.splice(index, 1);
+                alert(`Quote by ${this.quotes[index].author}deleted successfully.`)
             }
     }
     showForm:boolean = false;
