@@ -29,7 +29,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Known Bugs
 - The submit button does not automatically close the new quote form.
-- The upvote/downvote buttons don't change color to indicate user has voted.
 - The time past calculation is based on UTC time.
 
 ## Build

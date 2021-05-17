@@ -17,11 +17,11 @@
                 <div class="footer">
                   <div class="vote">
                     <div class="upvote">
-                      <fa-icon [icon]="upvoteIcon" (click)='upvote(i)'></fa-icon>
+                      <fa-icon [icon]="upvoteIcon" (click)='upvote(i)' [style.color]="quote.upvoted? 'var(--primary-green)': 'lightgrey'"></fa-icon>
                       <p class="mx-1">{{ quote.upvotes }}</p>
                     </div>
                     <div class="downvote mx-2">
-                      <fa-icon [icon]="downvoteIcon" (click)='downvote(i)'></fa-icon>
+                      <fa-icon [icon]="downvoteIcon" (click)='downvote(i)' [style.color]="quote.downvoted?'var(--accent-red)': 'lightgrey'"></fa-icon>
                       <p class="mx-1">{{ quote.downvotes }}</p>
                     </div>
                   </div>
